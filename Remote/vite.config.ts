@@ -10,7 +10,7 @@ export default defineConfig({
       name: 'custom',
       filename: 'custom.js',
       exposes: {
-          './SumTextTwoFields': './src/controls/SumTextTwoFields',
+          './controls': './src/controls',
       },
       shared: ['react', 'react-dom']
   })],
