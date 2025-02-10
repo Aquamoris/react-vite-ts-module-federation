@@ -18,11 +18,11 @@ export default defineConfig({
     target: 'esnext',
   },
   server: {
-    port: 5174,
+    port: 4174,
     host: true,
   },
   preview: {
-    port: 5174,
+    port: 4174,
     host: true,
   }
 })
