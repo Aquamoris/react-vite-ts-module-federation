@@ -1,51 +1,19 @@
-# version: '3.8'
-
-# services:
-#   host:
-#     container_name: host
-#     build: ./host
-#     ports:
-#       - "4173:4173"
-#     networks:
-#       - mf
-
-#   remote:
-#     container_name: remote
-#     build: ./remote
-#     ports:
-#       - "4174:4174"
-#     networks:
-#       - mf
-
-# networks:
-#   mf:
-#     driver: bridge
-
 version: '3.8'
 
 services:
-  nginx:
-    image: nginx:latest
-    container_name: nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - "4173:4173"
-    depends_on:
-      - host
-      - remote
-    networks:
-      - mf
-
   host:
     container_name: host
     build: ./host
+    ports:
+      - "4173:4173"
     networks:
       - mf
 
   remote:
     container_name: remote
     build: ./remote
+    ports:
+      - "4174:4174"
     networks:
       - mf
 

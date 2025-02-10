@@ -9,7 +9,7 @@ export default defineConfig({
     federation({
       name: 'host',
       remotes: {
-        custom: 'http://localhost:4173/assets/custom.js'
+        custom: 'http://localhost:4174/assets/custom.js'
       },
       shared: ['react', 'react-dom'],
     })
@@ -24,6 +24,5 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true,
-    allowedHosts: ["host"],    
   }
 })
